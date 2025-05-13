@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Статистика по сделкам{% endblock %}
+
+{% block body %}
+    <div class="container table-container">
+        <h1 class="page-title">Статистика по сделкам</h1>
+        <p class="period-info">
+            <span class="badge bg-secondary">Период: {{ date_from }} - {{ date_to }}</span>
+        </p>
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID клиента</th>
+                    <th>Название клиента</th>
+                    <th class="text-end">Сумма успешных сделок</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stat in statistics %}
+                    <tr>
+                        <td>{{ stat.id }}</td>
+                        <td>{{ stat.name }}</td>
+                        <td class="text-end">{{ stat.sum|number_format(2, '.', ' ') }} ₽</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2" class="text"><strong>Общая сумма:</strong></td>
+                    <td class="text-end"><strong>{{ total_sum|number_format(2, '.', ' ') }} ₽</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %} 

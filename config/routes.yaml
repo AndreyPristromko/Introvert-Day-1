@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+deals_statistics:
+    path: /deals/statistics
+    controller: App\Controller\DealsController::getDealsStatistics
+    methods: [GET]
