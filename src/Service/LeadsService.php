@@ -27,7 +27,7 @@ class LeadsService extends ApiService
                     $flag = false;
                 } else {
                     foreach ($response['result'] as $deal) {
-                        if ($deal['date_create'] <= $dateFrom && $deal['date_close'] >= $dateTo) {
+                        if ($deal['date_create'] >= $dateFrom && $deal['date_close'] <= $dateTo) {
                             $totalSum += (float)$deal['price'];
                         }
                     }
