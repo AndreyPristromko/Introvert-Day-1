@@ -6,7 +6,7 @@ use Introvert\ApiClient;
 use Introvert\Configuration;
 use Psr\Log\LoggerInterface;
 
-class DealsService extends ApiService
+class LeadsService extends ApiService
 {
     public function __construct(ApiClient $api, Configuration $config, LoggerInterface $logger)
     {
