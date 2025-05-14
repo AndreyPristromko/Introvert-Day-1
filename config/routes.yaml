@@ -5,6 +5,6 @@ controllers:
     type: attribute
 
 deals_statistics:
-    path: /deals/statistics
-    controller: App\Controller\DealsController::getDealsStatistics
+    path: /leads/statistics
+    controller: App\Controller\LeadsController::getLeadsStatistics
     methods: [GET]
