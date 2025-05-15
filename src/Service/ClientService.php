@@ -2,9 +2,6 @@
 
 namespace App\Service;
 
-use Introvert\ApiClient;
-use Introvert\Configuration;
-
 class ClientService extends ApiService
 {
     public function getClients(): array
