@@ -2,17 +2,8 @@
 
 namespace App\Service;
 
-use Introvert\ApiClient;
-use Introvert\Configuration;
-use Psr\Log\LoggerInterface;
-
 class LeadsService extends ApiService
 {
-    public function __construct(ApiClient $api, Configuration $config, LoggerInterface $logger)
-    {
-        parent::__construct($api, $config, $logger);
-    }
-
     public function getDealsSum(int $dateFrom, int $dateTo): float
     {
         try {
